@@ -10,7 +10,7 @@ config = {
         "input_width": 416,
         "input_height": 416,
         "score_threshold": 0.5,
-        "iou_threshold": 0.65,
+        "iou_threshold": 0.8,
         "use_gpu": False,
         "class_names": [
             "person", "bicycle", "car", "motorcycle", "airplane", "bus", "train", "truck", "boat", "traffic light",
@@ -47,12 +47,10 @@ while(True):
     # Convert poses to Python list of dict
     poses = to_py_type(poses)
 
-    # Display the resulting frame
+    # Display the result frame
     cv2.imshow('frame', frame)
 
-    # The 'q' button is set as the
-    # quitting button you may use any
-    # desired button of your choice
+    # Press 'q' to exit
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 

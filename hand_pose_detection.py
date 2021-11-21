@@ -41,12 +41,10 @@ while(True):
     # Convert poses to Python list of dict
     poses = to_py_type(poses)
 
-    # Display the resulting frame
+    # Display the result frame
     cv2.imshow('frame', frame)
 
-    # The 'q' button is set as the
-    # quitting button you may use any
-    # desired button of your choice
+    # Press 'q' to exit
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
